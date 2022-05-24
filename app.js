@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/beers', (req, res) => {
-  res.render('beers');
+  res.render('index', { name: 'Fernando'});
   punkAPI
     .getBeers()
     .then(beersFromApi => console.log('Beers from the database: ', beersFromApi))
